@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robert Store | Canais Oficiais</title>
+    <meta name="description" content="Siga os canais oficiais da Robert Store. Conteúdo exclusivo sobre Roube um Brainrot do Roblox.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        .channels-container {
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 100px 20px;
+        }
+        .tiktok-card {
+            background: var(--card-bg);
+            border: 2px solid var(--gold-dark);
+            border-radius: 20px;
+            padding: 50px;
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        .tiktok-card:hover {
+            transform: scale(1.05);
+            border-color: var(--gold);
+            box-shadow: 0 0 50px var(--gold-glow);
+        }
+        .tiktok-icon {
+            font-size: 80px;
+            margin-bottom: 25px;
+            background: var(--gold-metallic);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            animation: pulse-gold 2s infinite ease-in-out;
+        }
+        .tiktok-card h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--gold);
+        }
+        .tiktok-card p {
+            margin-bottom: 30px;
+            opacity: 0.7;
+            font-size: 1.1rem;
+        }
+        .tiktok-btn {
+            display: inline-block;
+            padding: 18px 45px;
+            background: var(--gold-metallic);
+            color: #000;
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 5px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            animation: shine 4s linear infinite;
+            background-size: 200% auto;
+        }
+        .tiktok-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--gold-glow);
+        }
+        @keyframes pulse-gold {
+            0% { opacity: 0.8; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.1); }
+            100% { opacity: 0.8; transform: scale(1); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">ROBERT <span>STORE</span></div>
+        <nav>
+            <ul>
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#collections">Coleções</a></li>
+                <li><a href="canais.html">Canais</a></li>
+                <li><a href="https://wa.me/5511923661469" target="_blank" class="contact-btn">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="channels-container">
+        <div class="tiktok-card">
+            <div class="tiktok-icon">🎵</div>
+            <h2>NOSSO TIKTOK</h2>
+            <p>Acompanhe faby.siolly para os vídeos mais insanos e dicas de Roube um Brainrot!</p>
+            <a href="https://www.tiktok.com/@faby.siolly?_r=1&_t=ZS-95CA93XXT72" target="_blank" class="tiktok-btn">VISITAR CANAL</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Robert Store. Todos os direitos reservados. Focado em Roube um Brainrot Roblox.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
