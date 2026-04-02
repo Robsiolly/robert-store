@@ -302,15 +302,40 @@ footer {
     100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
 }
 
-/* Mobile Responsiveness */
+/* Mobile Responsiveness Improvements */
+@media (max-width: 1024px) {
+    .gradient-text { font-size: 4rem; }
+    .grid { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); padding: 0 20px; }
+}
+
 @media (max-width: 768px) {
-    .gradient-text {
-        font-size: 3rem;
-    }
-    header {
-        padding: 15px 20px;
-    }
-    header nav ul {
-        display: none; /* simple burger menu logic could be added later */
-    }
+    header { padding: 15px 30px; }
+    .logo { font-size: 22px; }
+    header nav ul { gap: 15px; }
+    header nav a { font-size: 0.85rem; }
+    
+    .gradient-text { font-size: 3rem; }
+    .hero p { font-size: 1rem; }
+    
+    .section-title h2 { font-size: 2.5rem; }
+    .collections { padding: 60px 20px; }
+    
+    .card-img-container { width: 100%; max-width: 280px; height: 280px; }
+}
+
+@media (max-width: 480px) {
+    .gradient-text { font-size: 2.5rem; }
+    .hero-buttons { flex-direction: column; width: 100%; max-width: 300px; margin: 0 auto; }
+    .btn { padding: 12px 25px; font-size: 0.9rem; }
+    
+    header nav ul { display: none; } /* Could add burger later, but simple for now */
+    
+    .tiktok-card { padding: 30px 20px; }
+    .tiktok-card h2 { font-size: 1.8rem; }
+}
+
+/* Service Worker and PWA meta adjustments */
+body {
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }

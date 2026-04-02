@@ -6,6 +6,8 @@
     <title>Robert Store | Canais Oficiais</title>
     <meta name="description" content="Siga os canais oficiais da Robert Store. Conteúdo exclusivo sobre Roube um Brainrot do Roblox.">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c5a059">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -106,5 +108,14 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registrado!', reg))
+                    .catch(err => console.log('Erro no Service Worker', err));
+            });
+        }
+    </script>
 </body>
 </html>

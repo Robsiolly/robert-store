@@ -6,6 +6,8 @@
     <title>Robert Store | O Melhor em Brainrots</title>
     <meta name="description" content="Bem-vindo à Robert Store. A loja definitiva para Roube um Brainrot do Roblox. Explore nossa coleção exclusiva de brainrots.">
     <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#c5a059">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -66,5 +68,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script src="script.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('sw.js')
+                    .then(reg => console.log('Service Worker registrado!', reg))
+                    .catch(err => console.log('Erro no Service Worker', err));
+            });
+        }
+    </script>
 </body>
 </html>

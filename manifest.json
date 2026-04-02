@@ -1,0 +1,23 @@
+{
+  "name": "Robert Store - Roube um Brainrot",
+  "short_name": "RobertStore",
+  "name_pt": "Robert Store Oficial",
+  "description": "A loja premium definitiva para vender e negociar Brainrots do Roblox.",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#c5a059",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "images/skibidi.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/skibidi.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
