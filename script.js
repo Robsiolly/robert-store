@@ -12,7 +12,7 @@ const brainrots = [
 ];
 
 const grid = document.getElementById('brainrot-grid');
-const whatsappNumber = "5511923661469";
+const discordUrl = "https://discord.gg/4gRqmVtq";
 
 function createCards() {
     grid.innerHTML = ''; 
@@ -25,8 +25,6 @@ function createCards() {
         card.setAttribute('data-tilt-speed', '400');
         card.setAttribute('data-tilt-perspective', '1000');
 
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=Olá,%20vi%20o%20Brainrot%20${encodeURIComponent(item.name)}%20no%20site%20Robert%20Store%20e%20quero%20negociar!`;
-
         card.innerHTML = `
             <div class="card-inner">
                 <div class="card-img-container">
@@ -35,14 +33,14 @@ function createCards() {
                 <div class="card-info">
                     <h3>${item.name}</h3>
                     <p>${item.desc}</p>
-                    <a href="${whatsappUrl}" target="_blank" class="buy-btn">Saiba Mais</a>
+                    <a href="${discordUrl}" target="_blank" class="buy-btn">Saiba Mais</a>
                 </div>
             </div>
         `;
 
         // Make the entire card clickable
         card.onclick = (e) => {
-            window.open(whatsappUrl, '_blank');
+            window.open(discordUrl, '_blank');
         };
 
         // Prevent double redirect if button is clicked

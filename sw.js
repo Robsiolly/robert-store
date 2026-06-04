@@ -1,4 +1,4 @@
-const CACHE_NAME = 'robert-store-v1';
+const CACHE_NAME = 'robert-store-v7';
 const ASSETS = [
     './',
     './index.html',
@@ -24,6 +24,22 @@ self.addEventListener('install', event => {
             return cache.addAll(ASSETS);
         })
     );
+    self.skipWaiting();
+});
+
+self.addEventListener('activate', event => {
+    event.waitUntil(
+        caches.keys().then(keys => {
+            return Promise.all(
+                keys.map(key => {
+                    if (key !== CACHE_NAME) {
+                        return caches.delete(key);
+                    }
+                })
+            );
+        })
+    );
+    self.clients.claim();
 });
 
 self.addEventListener('fetch', event => {
